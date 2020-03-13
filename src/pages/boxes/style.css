@@ -1,0 +1,47 @@
+
+.docs{
+    width: 35px;
+}
+
+#box-container{
+    max-width: 900px;
+    margin: 50px auto 0;
+}
+
+#box-container header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#box-container header h1{
+    font-size: 21px;
+    padding-left: 15px;
+    margin-left: 15px;
+    border-left: 1px solid #ddd;
+    
+}
+
+
+#box-container ul{
+    margin: 30px 0;
+    list-style: none;
+
+}
+#box-container .actions{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#box-container .actions button{
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+    background: #95afb8;
+    font-size: 16px;
+    font-weight: bold;
+}
+#box-container .actions button:hover{
+    opacity: 0.7;
+}
