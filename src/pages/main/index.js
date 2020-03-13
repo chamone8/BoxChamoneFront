@@ -30,8 +30,11 @@ export default class main extends Component {
                 <form onSubmit={this.handleSubmit}>
                     <img src={logo} alt="" className="img"/>
                     <input placeholder="Criar um Box" value={this.state.newBox} onChange={this.handleInputChange} />
-                    <button type="submit">Criar</button>
-                    <a class="boxes" href="https://frontbox.herokuapp.com/boxes">Listas Boxes</a>
+                    <div className="row">
+                        <button type="submit">Criar</button>
+                        <a class="boxes" href="https://frontbox.herokuapp.com/boxes">Listas Boxes</a>
+                    </div>
+                    
                 </form>
             </div>
         );
