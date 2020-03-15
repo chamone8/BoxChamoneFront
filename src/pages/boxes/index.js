@@ -22,12 +22,12 @@ export default class boxes extends Component {
        
         const {docs, ...productInfo} = response.data;
         this.setState({ box: docs, productInfo, page });
-        console.log(productInfo)
+        
     }
 
 
     prevPage = () =>{
-        const {page , productInfo} = this.state;
+        const {page} = this.state;
         
         if(page === 1) return;
         
