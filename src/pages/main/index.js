@@ -2,40 +2,46 @@ import React, { Component } from 'react';
 import api from '../../services/api';
 import logo from '../../assets/logo.png'
 import './style.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Button from 'react-bootstrap';
 
 
 export default class main extends Component {
     state = {
-        newBox:""
+        newBox: ""
     };
 
     handleSubmit = async e => {
         e.preventDefault();
-        
+
         const response = await api.post('boxes', {
             title: this.state.newBox
         });
 
-            this.props.history.push(`/box/${response.data._id}`);
+        this.props.history.push(`/box/${response.data._id}`);
     };
 
-    handleInputChange = (evet) =>{
-        this.setState({newBox: evet.target.value})
+    handleInputChange = (evet) => {
+        this.setState({ newBox: evet.target.value })
     }
 
 
     render() {
         return (
-            <div id="main-container" >
-                <form onSubmit={this.handleSubmit}>
-                    <img src={logo} alt="" className="img"/>
-                    <input placeholder="Criar um Box" value={this.state.newBox} onChange={this.handleInputChange} />
-                    <div className="row">
-                        <button type="submit">Criar</button>
-                        <a class="boxes" href="https://frontbox.herokuapp.com/boxes">Listas Boxes</a>
-                    </div>
+            <div className="container">
+                
+                    <div id="main-container" >
+                        <form onSubmit={this.handleSubmit}>
+                            <img src={logo} alt="" className="img-fluid" />
+                            <input placeholder="Criar um Box" value={this.state.newBox} onChange={this.handleInputChange} required/>
+                            <div className="row">
+                                <button className="btn btn-info" type="submit">Criar</button>
+                                <a className="btn btn-primary boxes" href="https://frontbox.herokuapp.com/boxes">Boxes</a>
+                            </div>
+
+                        </form>
                     
-                </form>
+                </div>
             </div>
         );
     }
