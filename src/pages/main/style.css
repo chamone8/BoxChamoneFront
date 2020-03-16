@@ -1,11 +1,11 @@
 @media screen and (max-width: 500px) {
-    img{
+    .img-fluid{
         margin: 50px 110px auto;
         width: 50%;
         border-radius: 8px;
     }
 }
-img{
+.img-fluid{
     margin-top: 50px;
     height: 400px;
 }
@@ -29,6 +29,7 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
+    
 
 }
 

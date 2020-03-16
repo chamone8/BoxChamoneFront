@@ -65,7 +65,7 @@ export default class boxes extends Component {
                     {box.map(docs => (
 
                         <li key={docs._id}>
-                            <img className="docs" src={img} alt=""></img>
+                            <img className="doc" src={img} alt=""></img>
                             <a href={"box/"+docs._id}>
                                 
                                 <strong>{docs.title}</strong>

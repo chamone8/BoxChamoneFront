@@ -1,11 +1,12 @@
 
-.docs{
+.doc{
     width: 35px;
 }
 
 #box-container{
     max-width: 900px;
-    margin: 50px auto 0;
+    /* margin: 50px auto 0; */
+    margin: 40px 100px 30px;
 }
 
 #box-container header{
